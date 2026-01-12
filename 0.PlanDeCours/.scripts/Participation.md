@@ -1,4 +1,4 @@
-# Participation au 12-01-2026 21:47
+# Participation au 12-01-2026 21:49
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -17,7 +17,7 @@
 |:hash:| Boréal :id:                | README.md    | images |
 |------|----------------------------|--------------|--------|
 | 0 | [300135538](../300135538/README.md) :point_right: [RedaYousfi](https://github.com/RedaYousfi) <image src='https://avatars0.githubusercontent.com/u/133056385?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
-| 1 | [300146112](../300146112/README.md) :point_right: [laggabkhalef](https://github.com/laggabkhalef) <image src='https://avatars0.githubusercontent.com/u/205994703?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
+| 1 | [300146112](../300146112/README.md) :point_right: [laggabkhalef](https://github.com/laggabkhalef) <image src='https://avatars0.githubusercontent.com/u/205994703?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 2 | [300146676](../300146676/README.md) :point_right: [harkatiaymen](https://github.com/harkatiaymen) <image src='https://avatars0.githubusercontent.com/u/211595997?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 3 | [300148094](../300148094/README.md) :point_right: [ouailg28](https://github.com/ouailg28) <image src='https://avatars0.githubusercontent.com/u/212054634?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 4 | [300150268](../300150268/README.md) :point_right: [kemiche06](https://github.com/kemiche06) <image src='https://avatars0.githubusercontent.com/u/207268490?s=460&v=4' width=20 height=20></image> | :x: | :x: |
@@ -35,4 +35,4 @@
 | 16 | [300152131](../300152131/README.md) :point_right: [el-calvino](https://github.com/el-calvino) <image src='https://avatars0.githubusercontent.com/u/205994709?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 17 | [300152260](../300152260/README.md) :point_right: [Hannibalcarthage](https://github.com/Hannibalcarthage) <image src='https://avatars0.githubusercontent.com/u/195238262?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 18 | [300152410](../300152410/README.md) :point_right: [syphax25](https://github.com/syphax25) <image src='https://avatars0.githubusercontent.com/u/212047331?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| :abacus: | \$\\frac{3}{19}\$ = 15.79% | \$\displaystyle\sum_{i=1}^{19} s_i\$ = 3 |
+| :abacus: | \$\\frac{4}{19}\$ = 21.05% | \$\displaystyle\sum_{i=1}^{19} s_i\$ = 4 |
