@@ -45,7 +45,7 @@ foreach ($id in $ETUDIANTS) {
     if (Test-Path $FILE) {
         $ACTUAL_NAME = Split-Path -Leaf (Resolve-Path $FILE)
         if ($ACTUAL_NAME -eq "README.md") {
-            if (Test-Path $FOLDER) {
+            if (Test-Path $FOLDER -PathType Container) {
                 Write-Output $FULL_OK
                 $s++
             }
