@@ -202,7 +202,7 @@ terraform {
 }
 
 provider "proxmox" {
-  endpoint  = "https://proxmox.example.com:8006/api2/json"
+  endpoint  = var.proxmox_endpoint
   api_token = var.proxmox_api_token
   insecure  = true
 }
@@ -213,6 +213,11 @@ provider "proxmox" {
 ## 4️⃣ Variables (`variables.tf`)
 
 ```hcl
+variable "proxmox_endpoint" {
+  type      = string
+  sensitive = true
+}
+
 variable "proxmox_api_token" {
   type      = string
   sensitive = true
@@ -286,6 +291,7 @@ resource "proxmox_virtual_environment_vm" "linux_vm" {
 ## 6️⃣ Secrets (`terraform.tfvars`)
 
 ```hcl
+proxmox_endpoint = "https://proxmox.example.com:8006/api2/json"
 proxmox_api_token = "root@pam!tofu=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ssh_public_key    = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI..."
 ```
