@@ -1,4 +1,4 @@
-# Participation au 23-01-2026 16:48
+# Participation au 23-01-2026 17:00
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -16,7 +16,7 @@
 
 |:hash:| Boréal :id:                | :id:.md    |
 |------|----------------------------|------------|
-| 0 | [300135538](../300135538.md) :point_right: [RedaYousfi](https://github.com/RedaYousfi) <image src='https://avatars0.githubusercontent.com/u/133056385?s=460&v=4' width=20 height=20></image> | :x: |
+| 0 | [300135538](../300135538.md) :point_right: [RedaYousfi](https://github.com/RedaYousfi) <image src='https://avatars0.githubusercontent.com/u/133056385?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
 | 1 | [300141570](../300141570.md) :point_right: [octocat](https://github.com/octocat) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: |
 | 2 | [300146112](../300146112.md) :point_right: [laggabkhalef](https://github.com/laggabkhalef) <image src='https://avatars0.githubusercontent.com/u/205994703?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: |
 | 3 | [300146676](../300146676.md) :point_right: [harkatiaymen](https://github.com/harkatiaymen) <image src='https://avatars0.githubusercontent.com/u/211595997?s=460&v=4' width=20 height=20></image> | :x: |
