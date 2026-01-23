@@ -3,21 +3,16 @@
 
 ```mermaid
 graph TD
-    %% Kernel
-    K[Noyau du système<br/>(Linux / Windows)]
+    K["Noyau du systeme\nLinux / Windows"]
+    S["Shell\nbash / PowerShell / cmd"]
 
-    %% Shell
-    S[Shell<br/>(bash, PowerShell, cmd)]
+    A1["Applications"]
+    A2["Serveur Web\nApache / Nginx / IIS"]
+    A3["DNS"]
+    A4["Active Directory"]
+    A5["Serveur de fichiers"]
+    A6["Base de donnees"]
 
-    %% Services & Applications
-    A1[Applications<br/>(Web, ERP, CLI)]
-    A2[Serveur Web<br/>(Apache, Nginx, IIS)]
-    A3[DNS]
-    A4[Active Directory]
-    A5[Serveur de fichiers]
-    A6[Base de données]
-
-    %% Relations
     A1 --> S
     A2 --> S
     A3 --> S
