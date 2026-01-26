@@ -9,7 +9,7 @@ variable "proxmox_api_token" {
 }
 
 variable "node_name" {
-  default = "pve"
+  default = "labinfo"
 }
 
 variable "vm_user" {
