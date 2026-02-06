@@ -18,3 +18,6 @@ Un exemple est fourni : `terraform.tfvars.example`.
 
 ## Preuve (capture)
 Ajouter une capture dans le dossier `images/`.
+## Capture VM
+
+![VM](images/vm.png)
