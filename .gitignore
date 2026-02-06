@@ -209,7 +209,10 @@ __marimo__/
 # opentofu
 *.tfstate
 *.tfstate.backup
-.terraform/
 terraform.tfvars
-!3.IaC/300152410/
-!3.IaC/300152410/**
+
+# Ignore Terraform lock file
+*.terraform.lock.hcl
+# Ignore Terraform directories
+.terraform/
+
