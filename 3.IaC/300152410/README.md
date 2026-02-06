@@ -20,4 +20,5 @@ Un exemple est fourni : `terraform.tfvars.example`.
 Ajouter une capture dans le dossier `images/`.
 ## Capture VM
 
-![VM](images/vm.png)
+![VM](images/vm.jpeg)
+
