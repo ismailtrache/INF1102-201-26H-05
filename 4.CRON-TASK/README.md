@@ -1,13 +1,109 @@
-# Leçon : Scruter les logs Nginx et détecter les IP des visiteurs
+# Linux — Gestionnaire de tâches & Observateur d’évènements
 
-## 1️⃣ Introduction
+## 🎯 Objectif
+
+Surveiller le système **en temps réel** et **analyser les pannes après coup**.
+
+---
+
+## 1️⃣ Gestionnaire de tâches (temps réel)
+
+### 🔹 Processus
+
+```bash
+top        # basique
+htop       # recommandé
+ps aux     # liste complète
+```
+
+### 🔹 Actions
+
+```bash
+kill PID
+kill -9 PID
+```
+
+### 🔹 Ressources
+
+```bash
+uptime     # charge système
+free -h    # mémoire
+df -h      # disque
+```
+
+---
+
+## 2️⃣ Observateur d’évènements (logs)
+
+📂 Logs système :
+
+```bash
+/var/log/syslog
+/var/log/auth.log
+```
+
+📂 Logs noyau :
+
+```bash
+dmesg
+```
+
+📂 Logs services :
+
+```bash
+journalctl
+journalctl -u nginx
+journalctl -xe
+```
+
+---
+
+## 3️⃣ Services systemd
+
+```bash
+systemctl status nginx
+systemctl restart nginx
+```
+
+---
+
+## 4️⃣ Méthode de dépannage
+
+| Étape            | Outil                    |
+| ---------------- | ------------------------ |
+| Observer         | `top`, `htop`            |
+| Vérifier service | `systemctl status`       |
+| Analyser cause   | `journalctl`, `/var/log` |
+| Corriger         | config / restart         |
+
+---
+
+## 5️⃣ Équivalences Windows → Linux
+
+| Windows                  | Linux                    |
+| ------------------------ | ------------------------ |
+| Gestionnaire de tâches   | `top`, `htop`            |
+| Observateur d’évènements | `journalctl`, `/var/log` |
+
+---
+
+## 🔑 À retenir
+
+* **Temps réel** = performance
+* **Logs** = diagnostic
+* Toujours utiliser **les deux ensemble**
+
+
+# Exercice : Scruter les logs Nginx et détecter les IP des visiteurs
+
+## 1️⃣ 👁️ Big Brother
 
 Nginx, serveur web très populaire, enregistre toutes les requêtes dans des **fichiers de logs**. Il existe principalement deux types de logs :
 
 * **access.log** : contient toutes les requêtes reçues (pages visitées, adresses IP, statut HTTP…).
 * **error.log** : contient les erreurs du serveur.
 
-**Objectif de cette leçon :**
+**Objectif de l'exercice :**
 
 * Extraire toutes les **adresses IP** qui visitent le site.
 * Stocker ces IP dans un fichier.
