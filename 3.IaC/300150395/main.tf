@@ -2,6 +2,7 @@ resource "proxmox_vm_qemu" "vm1" {
   name        = var.pm_vm_name
   target_node = "labinfo"
   clone       = "ubuntu-jammy-template"
+  full_clone  = false
 
   cores   = 2
   sockets = 1
@@ -27,8 +28,8 @@ resource "proxmox_vm_qemu" "vm1" {
 
   ciuser  = "ubuntu"
   sshkeys = <<EOF
-${file("C:/Users/NITRO/.ssh/ismailtrache.pub")}
-${file("C:/Users/NITRO/.ssh/cle_publique_du_prof.pub")}
+   ${file("~/.ssh/ismailtrache.pub")}
+   ${file("~/.ssh/cle_publique_du_prof.pub")}
   EOF
 }
 
