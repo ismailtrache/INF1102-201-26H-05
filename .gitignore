@@ -207,6 +207,9 @@ marimo/_lsp/
 __marimo__/
 
 # opentofu
-
-terraform.*
-.terraform*
+*.tfstate
+*.tfstate.backup
+.terraform/
+terraform.tfvars
+!3.IaC/300152410/
+!3.IaC/300152410/**
