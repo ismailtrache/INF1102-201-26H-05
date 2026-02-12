@@ -216,3 +216,4 @@ terraform.tfvars
 # Ignore Terraform directories
 .terraform/
 
+.DS_Store
