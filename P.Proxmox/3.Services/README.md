@@ -113,3 +113,18 @@ flowchart LR
         O[pve-mini-journalreader] --> B
     end
 ```
+
+### 👺 noVNC
+
+```mermaid
+flowchart LR
+    Browser["Navigateur Web"] -->|HTTPS / port 8006| Proxy[pveproxy]
+    Proxy -->|API call| API[pvedaemon]
+    API -->|Controle VM / Container| VM[VM / Container]
+
+    Proxy -->|WebSocket| noVNC[noVNC Console HTML5]
+    noVNC --> VM
+
+    VM -->|Output video / input clavier/souris| noVNC
+    noVNC -->|WebSocket| Browser
+```
