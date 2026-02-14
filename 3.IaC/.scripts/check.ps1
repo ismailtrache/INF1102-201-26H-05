@@ -69,7 +69,7 @@ Write-Output ""
 # Présence table
 Write-Output "## :a: Présence"
 Write-Output ""
-Write-Output "|:hash:| Boréal :id:                | README.md | images | main.tf | VM | SSH |"
+Write-Output "|:hash:| Boréal :id:                | README.md | images | main.tf | VM | <image src='https://avatars0.githubusercontent.com/u/62551735?s=460&v=4' width=20 height=20></image> SSH |"
 Write-Output "|------|----------------------------|-----------|--------|---------|----|-----|"
 
 # -------------------------------

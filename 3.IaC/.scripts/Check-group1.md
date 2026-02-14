@@ -26,7 +26,7 @@
 
 ## :a: Présence
 
-|:hash:| Boréal :id:                | README.md | images | main.tf | VM | SSH |
+|:hash:| Boréal :id:                | README.md | images | main.tf | VM | <image src='https://avatars0.githubusercontent.com/u/62551735?s=460&v=4' width=20 height=20></image> SSH |
 |------|----------------------------|-----------|--------|---------|----|-----|
 | 0 | [300135538](../300135538/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/133056385?s=460&v=4' width=20 height=20></image>](https://github.com/RedaYousfi) | :x: | :x: | :x: | :x: | :x: |
 | 1 | [300141570](../300141570/README.md) :point_right: [<image src='https://avatars0.githubusercontent.com/u/66260193?s=460&v=4' width=20 height=20></image>](https://github.com/swberk) | :heavy_check_mark: | :x: | :heavy_check_mark: | :green_circle: [10.7.237.226](http://10.7.237.226) | :link: |
