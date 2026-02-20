@@ -88,21 +88,6 @@ crontab -e
 
 ---
 
-## 🎯 Exemple concret (Moodle)
-
-Dans ton contexte INF1102 avec Moodle, le CRON sert à :
-
-* envoyer les notifications
-* traiter les devoirs
-* exécuter les tâches planifiées
-* nettoyer les sessions
-
-Exemple Moodle :
-
-```
-*/1 * * * * /usr/bin/php /var/www/moodle/admin/cli/cron.php
-```
-
 
 ## 1️⃣ Gestionnaire de tâches (temps réel)
 
