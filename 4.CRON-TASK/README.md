@@ -6,6 +6,89 @@ Surveiller le système **en temps réel** et **analyser les pannes après coup**
 
 ---
 
+**CRON** est un service des systèmes Unix/Linux qui permet de **planifier l’exécution automatique de tâches** à des dates et heures précises.
+
+Le nom vient du mot grec **"chronos"** (temps).
+
+---
+
+## 🔎 À quoi sert CRON ?
+
+CRON permet d’exécuter automatiquement :
+
+* des scripts
+* des sauvegardes
+* des mises à jour
+* des tâches de maintenance
+* des commandes système
+
+Par exemple :
+
+* Tous les jours à 2h → sauvegarde
+* Toutes les 5 minutes → vérification d’un service
+* Chaque lundi → génération d’un rapport
+
+---
+
+## ⚙️ Comment ça fonctionne ?
+
+Le service principal s’appelle :
+
+* cron
+
+Les tâches planifiées sont définies dans un fichier appelé :
+
+* **crontab** (cron table)
+
+---
+
+## 🧱 Structure d’une ligne CRON
+
+```
+* * * * * commande
+| | | | |
+| | | | └── Jour de la semaine (0-7)
+| | | └──── Mois (1-12)
+| | └────── Jour du mois (1-31)
+| └──────── Heure (0-23)
+└────────── Minute (0-59)
+```
+
+---
+
+## 📌 Exemple
+
+Exécuter un script tous les jours à 3h15 :
+
+```
+15 3 * * * /home/user/backup.sh
+```
+
+Exécuter une commande toutes les 5 minutes :
+
+```
+*/5 * * * * /usr/bin/php /var/www/html/cron.php
+```
+
+---
+
+## 🔧 Commandes utiles
+
+Afficher les tâches planifiées :
+
+```
+crontab -l
+```
+
+Modifier les tâches :
+
+```
+crontab -e
+```
+
+---
+
+
 ## 1️⃣ Gestionnaire de tâches (temps réel)
 
 ### 🔹 Processus
