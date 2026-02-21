@@ -5,8 +5,11 @@ BASE_NET="10.7.237"
 START=224
 END=245
 
-GOBUSTER="$HOME/go/bin/gobuster"
-WORDLIST="/snap/seclists/current/Discovery/Web-Content/raft-medium-directories.txt"
+GOBUSTER="${GOBUSTER:-$HOME/go/bin/gobuster}"
+WORDLIST="${WORDLIST:-/snap/seclists/current/Discovery/Web-Content/raft-medium-directories.txt}"
+EXTENSIONS="html,php,txt,js,json,xml,bak,old"
+THREADS=20
+TIMEOUT="5s"
 
 OUTDIR="$HOME/logs/gobuster"
 mkdir -p "$OUTDIR"
@@ -15,23 +18,27 @@ ts="$(date +%F_%H%M%S)"
 RUNLOG="${OUTDIR}/run_${ts}.log"
 SKIPLOG="${OUTDIR}/skipped_${ts}.log"
 
-echo "$(date '+%F %T') START scan ${BASE_NET}.${START}-${END}" >> "$RUNLOG"
+echo "$(date '+%F %T') START scan ${BASE_NET}.${START}-${END}" | tee -a "$RUNLOG"
 
 for i in $(seq "$START" "$END"); do
   ip="${BASE_NET}.${i}"
   url="http://${ip}"
   outfile="${OUTDIR}/dir_${ip}_${ts}.txt"
 
-if curl -sS --max-time 2 -I "$url" >/dev/null 2>&1; then
-  echo "=== SCAN $url ==="
-  echo "$(date '+%F %T') SCAN $url -> $outfile" >> "$RUNLOG"
-
-  "$GOBUSTER" dir -u "$url" -w "$WORDLIST" -x html,php,txt -t 5 --timeout 3s -q -o "$outfile" || true
-else
-  echo "=== SKIP $url (no HTTP response) ==="
-  echo "$(date '+%F %T') SKIP $url (no HTTP response)" >> "$SKIPLOG"
-fi
-
+  if curl -sS --max-time 3 -I "$url" >/dev/null 2>&1; then
+    echo "=== SCAN $url ===" | tee -a "$RUNLOG"
+    "$GOBUSTER" dir \
+      -u "$url" \
+      -w "$WORDLIST" \
+      -x "$EXTENSIONS" \
+      -t "$THREADS" \
+      --timeout "$TIMEOUT" \
+      --no-error \
+      -o "$outfile" || true
+    grep "Status:" "$outfile" | head -20 || true
+  else
+    echo "=== SKIP $url (no HTTP response) ===" | tee -a "$SKIPLOG"
+  fi
 done
 
-echo "$(date '+%F %T') END" >> "$RUNLOG"
+echo "$(date '+%F %T') END" | tee -a "$RUNLOG"
